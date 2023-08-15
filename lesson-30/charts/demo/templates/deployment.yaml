@@ -19,6 +19,7 @@ spec:
       {{- end }}
       labels:
         {{- include "demo.selectorLabels" . | nindent 8 }}
+        hash: {{ .Values.hash }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
