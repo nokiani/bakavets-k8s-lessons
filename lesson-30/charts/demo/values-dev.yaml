@@ -1,7 +1,6 @@
 replicaCount: 2
 
-hash: "2dfd02e0"
-
 image:
   repository: nginx
   tag: "1.22.0"
+  hash: "2dfd02a0"

@@ -15,11 +15,11 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        hash: {{ .Values.hash }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
         {{- include "demo.selectorLabels" . | nindent 8 }}
+        hash: {{ .Values.image.hash }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
