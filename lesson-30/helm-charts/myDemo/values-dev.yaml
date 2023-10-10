@@ -1,7 +1,7 @@
 global:
 
 helm-template:
-  nameOverride: "myDemo-service"
+  nameOverride: "my-demo-service"
   fullnameOverride: ""
 
   # Зависит от типов
