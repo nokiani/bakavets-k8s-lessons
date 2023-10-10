@@ -1,0 +1,20 @@
+global:
+
+helm-template:
+  nameOverride: "my-second-service"
+  fullnameOverride: ""
+
+  # Зависит от типов
+  settings:
+    SHEP_IS_IGNORE_WSS: true
+    SHEP_IS_WSS_USING: true
+    SHEP_SENDER_ID: centercredit
+    SHEP_SERVICE_ID: CITS_DEBTS
+    SHEP_SIGN_KEY_IDENTIFIER: X509_KEY_IDENTIFIER
+    SHEP_SIGN_KEY_PATH: /app/cert/gost.p12
+    SHEP_SIGN_KEY_TYPE: PKCS12
+    KEY_STORE_BUILDER_PATH: /tmp/container.p12
+    server__servlet__context-path: /api/v1/gov/cits-debts
+    IDP_URL: https://dbp-test.bcc.kz/auth/realms/bank
+    IDP_ROLE_MAP: '{"items" : [{"srcRole": "govtech-user", "destRole": "clients"}]}'
+    log-config__level: INFO
